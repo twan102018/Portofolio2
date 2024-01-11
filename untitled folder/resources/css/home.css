@@ -147,11 +147,25 @@ body {
   background-color: rgb(8, 19, 61);
   display: inline-block;
   margin: 0 10px;
+  overflow: hidden;
 }
 .card i {
   margin-top: 5rem;
   font-size: 4rem;
   display: inline-block;
+}
+
+.card-body {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.card-body::-webkit-scrollbar {
+  width: 12px;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+  background-color: rgb(49, 74, 165);
 }
 
 .design-section {
@@ -226,7 +240,7 @@ body {
 }
 
 .btn:hover {
-  transition: 1s;
   color: #ffffff;
   background-color: #2163f2;
+  text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px #553300, 0px 0px 10px #553300;
 }/*# sourceMappingURL=home.css.map */
