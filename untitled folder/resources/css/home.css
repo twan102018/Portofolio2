@@ -310,6 +310,7 @@ body {
 }
 .card2 .title a {
   color: #ffffff;
+  text-decoration: none;
 }
 .card2 .text {
   height: 70px;
