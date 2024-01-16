@@ -280,8 +280,17 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
-.card2 .wrapper {
+.card2 .wrapper1 {
   background: url(https://executiveaccommodationandservices.com/wp-content/uploads/2022/11/cannes-film-festival.jpg) 30% 1%/cover no-repeat;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(8, 19, 61, 0.3), 0 15px 12px rgba(8, 19, 61, 0.2);
+}
+.card2 .wrapper1:hover .data {
+  transform: translateY(0);
+}
+.card2 .wrapper {
   min-height: 540px;
   position: relative;
   overflow: hidden;
@@ -290,14 +299,20 @@ body {
 .card2 .wrapper:hover .data {
   transform: translateY(0);
 }
-.card2 .data {
+.card2 .wrapper.wrapper1 {
+  background: url(https://executiveaccommodationandservices.com/wp-content/uploads/2022/11/cannes-film-festival.jpg) 30% 1%/cover no-repeat;
+}
+.card2 .wrapper.wrapper2 {
+  background: url(https://www.expomobilia.com/wp-content/uploads/2023/08/AdobeStock_549763516_Editorial_Use_Only.jpg) 30% 1%/cover no-repeat;
+}
+.card2 .wrapper .data {
   position: absolute;
   bottom: 0;
   width: 100%;
   transform: translateY(calc(80px + 1em));
   transition: transform 0.3s;
 }
-.card2 .data .content {
+.card2 .wrapper .data .content {
   padding: 1.5em;
   position: relative;
   z-index: 1;
