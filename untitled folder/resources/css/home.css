@@ -261,6 +261,13 @@ body {
   padding: 1rem;
   min-width: 500px;
 }
+@media screen and (max-width: 768px) {
+  .card2 {
+    float: none;
+    min-width: auto;
+    width: 100%;
+  }
+}
 .card2 .menu-content {
   margin: 0;
   padding: 0;

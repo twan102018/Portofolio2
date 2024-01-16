@@ -328,6 +328,12 @@ body {
   padding: 1rem;
   min-width: 500px;
 
+  @media screen and (max-width: 768px) {
+    float: none;
+    min-width: auto;
+    width: 100%;
+  }
+
   .menu-content {
     @include cf;
     margin: 0;
