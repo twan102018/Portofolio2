@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(7, 14, 39);
+  overscroll-behavior-x: none;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+
+.navigation {
+  height: 70px;
+  background: rgb(8, 17, 49);
+}
+.navigation .nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.navigation .brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.navigation .brand a,
+.navigation .brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.navigation nav {
+  float: right;
+}
+.navigation nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation nav ul li {
+  float: left;
+  position: relative;
+}
+.navigation nav ul li.no-hover a:hover::before {
+  width: 0;
+}
+.navigation nav ul li a {
+  display: block;
+  padding: 10px 20px 0 20px;
+  line-height: 50px;
+  background: rgb(8, 17, 49);
+  color: #ffffff;
+  text-decoration: none;
+}
+.navigation nav ul li a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+.navigation nav ul li a::before {
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: rgb(49, 74, 165);
+  width: 0%;
+  bottom: 0px;
+}
+.navigation nav ul li a:hover::before {
+  width: 70%;
+}
+.navigation nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+.navigation .nav-dropdown {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: rgb(49, 74, 165);
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 799px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-left: 4rem;
+  }
+  .card {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .card i {
+    margin-top: 3rem;
+    font-size: 2rem;
+    display: inline-block;
+  }
+  .card-body {
+    max-height: none;
+    overflow-y: visible;
+  }
+  .card-body::-webkit-scrollbar {
+    width: 0;
+  }
+  .timeline {
+    width: 100%;
+  }
+  .timeline-content {
+    margin: 0;
+  }
+  .btn {
+    margin-right: 0;
+  }
+  .project-container {
+    padding: 1rem;
+  }
+  .card2 {
+    min-width: 80%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 799px) and (min-width: 768px) {
+  .card2 {
+    min-width: 50%;
+  }
+}/*# sourceMappingURL=home.css.map */
