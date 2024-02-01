@@ -1,0 +1,480 @@
+// Variables
+$content-width: 1000px;
+$breakpoint: 799px;
+$nav-height: 70px;
+$nav-background: rgb(8, 17, 49);
+$nav-font-color: #ffffff;
+$link-hover-color: rgb(49, 74, 165);
+$background-color: rgb(7, 14, 39);
+$card-color: rgb(8, 19, 61);
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
+
+// Body
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $background-color;
+  overscroll-behavior-x: none;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+
+// Navigation
+.navigation {
+  height: $nav-height;
+  background: $nav-background;
+
+  .nav-container {
+    max-width: $content-width;
+    margin: 0 auto;
+  }
+
+  .brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.4em;
+
+    a,
+    a:visited {
+      color: $nav-font-color;
+      text-decoration: none;
+    }
+  }
+
+  nav {
+    float: right;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        float: left;
+        position: relative;
+
+        &.no-hover {
+          a {
+            &:hover::before {
+              width: 0;
+            }
+          }
+        }
+
+        a {
+          display: block;
+          padding: 10px 20px 0 20px;
+          line-height: 50px;
+          background: $nav-background;
+          color: $nav-font-color;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+            color: $nav-font-color;
+          }
+
+          &::before {
+            transition: 300ms;
+            height: 5px;
+            content: "";
+            position: absolute;
+            background-color: $link-hover-color;
+            width: 0%;
+            bottom: 0px;
+          }
+
+          &:hover::before {
+            width: 70%;
+          }
+
+          &:not(:only-child):after {
+            padding-left: 4px;
+            content: " ▾";
+          }
+        }
+      }
+    }
+  }
+
+  .nav-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  }
+
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $link-hover-color;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 300ms ease-in-out;
+  }
+
+  span:before {
+    top: -10px;
+  }
+
+  span:after {
+    bottom: -10px;
+  }
+
+  &.active span {
+    background-color: transparent;
+
+    &:before,
+    &:after {
+      top: 0;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block !important;
+  }
+}
+
+// AOS Styles
+
+.not-allowed {
+  cursor: pointer;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+  height: 100vh;
+}
+
+// Cards
+.card-container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-width: 400px;
+  width: 400px;
+  height: 400px;
+  background-color: $card-color;
+  display: inline-block;
+  margin: 0 10px;
+  overflow: hidden;
+
+  i {
+    margin-top: 5rem;
+    font-size: 4rem;
+    display: inline-block;
+  }
+}
+
+.card-body {
+  max-height: 100%; 
+  overflow-y: auto; 
+}
+.card-body::-webkit-scrollbar {
+  width: 12px; 
+}
+
+.card-body::-webkit-scrollbar-thumb {
+  background-color: $link-hover-color; 
+}
+
+
+
+
+// Timeline
+
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .timeline-content {
+    padding: 20px;
+    background: $card-color;
+    box-shadow: 5px 5px 10px #003ab6, -5px -5px 10px #044eec;
+    border-radius: 5px;
+    color: white;
+    padding: 1.75rem;
+    transition: 0.4s ease;
+    margin: 1rem;
+    margin-bottom: 20px;
+    border-radius: 6px;
+  }
+
+  .timeline-component {
+    margin: 0px 20px 20px 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+
+    .timeline-middle {
+      position: relative;
+      background-image: linear-gradient(45deg, #2163f2, #1d00c0, #2163f2);
+      width: 3px;
+      height: 100%;
+    }
+
+    .main-middle {
+      opacity: 0;
+    }
+
+    .timeline-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-image: linear-gradient(45deg, #2163f2, #1d00c0, #002fff);
+      transform: translateX(-50%);
+    }
+  }
+}
+
+
+//button
+.btn {
+  color: $nav-font-color;
+  background-color: #2163f279;
+  display: inline-block;
+  margin-right: 10px;
+}
+.btn:hover {
+  color: $nav-font-color;
+  background-color: #2163f2;
+  text-shadow: 0px 0px 30px white,0px 0px 30px white,0px 0px 30px white,0px 0px 10px #553300,0px 0px 10px #553300;
+}
+
+
+//project cards
+
+
+@mixin cf {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.project-container {
+  margin: auto;
+  width: 100%;
+  padding: 3rem;
+  height: 100vh;
+}
+
+.row {
+  margin: auto 0;
+}
+
+.card2 {
+  float: left;
+  padding: 1rem;
+  width: 100%;  
+  min-width: 100%;  
+
+  @media screen and (min-width: 768px) {
+    min-width: 500px;  
+  }
+
+  .menu-content {
+    @include cf;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      display: inline-block;
+    }
+    a {
+      color: $nav-font-color;
+      text-decoration: none;
+    }
+  }
+
+  .wrapper1 {
+    background: url(https://executiveaccommodationandservices.com/wp-content/uploads/2022/11/cannes-film-festival.jpg) 30% 1% / cover no-repeat;
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba($card-color, 0.3), 0 15px 12px rgba($card-color, 0.2);
+    
+    &:hover {
+      .data {
+        transform: translateY(0);
+      }
+    }
+  }
+  .wrapper {
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba($card-color, 0.3), 0 15px 12px rgba($card-color, 0.2);
+
+    &:hover {
+      .data {
+        transform: translateY(0);
+      }
+    }
+
+    &.wrapper1 {
+      background: url(https://executiveaccommodationandservices.com/wp-content/uploads/2022/11/cannes-film-festival.jpg) 30% 1% / cover no-repeat;
+    }
+
+    &.wrapper2 {
+      background: url(https://www.expomobilia.com/wp-content/uploads/2023/08/AdobeStock_549763516_Editorial_Use_Only.jpg) 30% 1% / cover no-repeat;
+    }
+
+    .data {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      transform: translateY(calc(80px + 1em));
+      transition: transform 0.3s;
+
+      .content {
+        padding: 1.5em;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
+  .type {
+    font-size: 12px;
+  }
+
+  .title {
+    margin-top: 10px;
+
+    a {
+      color: $nav-font-color;
+      text-decoration: none;
+    }
+  }
+
+  .text {
+    height: 70px;
+    margin: 0;
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  input[type='checkbox']:checked + .menu-content {
+    transform: translateY(-60px);
+  }
+
+  .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $card-color;
+    color: $nav-font-color;
+    padding: .75rem;
+
+    span {
+      display: block;
+      text-align: center;
+    }
+
+    .day {
+      font-weight: 700;
+      font-size: 3rem;
+      text-shadow: 2px 3px 2px rgba($card-color, 0.18);
+    }
+
+    .month {
+      text-transform: uppercase;
+    }
+
+    .month,
+    .year {
+      font-size: 10px;
+    }
+  }
+
+  .content {
+    background-color: $card-color;
+    color: white;
+    box-shadow: 0 5px 30px 10px rgba($card-color, 0.3);
+  }
+
+  .menu-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+
+    li {
+      text-align: center;
+      width: 3rem;
+      background-color: $card-color;
+      height: 3rem;
+      position: relative;
+    }
+
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
