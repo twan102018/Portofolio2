@@ -7,3 +7,4 @@ AOS.init({
   mirror: false,
   anchorPlacement: 'top-bottom',
 });
+

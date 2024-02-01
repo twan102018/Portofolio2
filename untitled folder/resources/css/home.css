@@ -133,11 +133,10 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 5vh;
-  height: 100vh;
+  height: 40vh;
 }
 
 .card-container {
-  margin-top: 10%;
   display: flex;
   justify-content: center;
 }
@@ -389,4 +388,59 @@ body {
 }
 .card2 .menu-content i {
   font-size: 24px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 799px) {
+  .nav-container {
+    font-size: 0.7rem;
+  }
+  .container {
+    margin-top: 10rem;
+  }
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line to center the cards vertically */
+    margin-top: 5rem;
+    margin-left: 4rem;
+  }
+  .card {
+    max-width: 80%; /* Adjust the width as needed */
+    width: 100%;
+    margin: 0 0 10px; /* Adjust the margins as needed */
+  }
+  .card i {
+    margin-top: 3rem;
+    font-size: 2rem;
+    display: inline-block;
+  }
+  .card-body {
+    max-height: none;
+    overflow-y: visible;
+  }
+  .card-body::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar on mobile */
+  }
+  .timeline {
+    width: 100%;
+  }
+  .timeline-content {
+    margin: 0;
+  }
+  .btn {
+    margin-right: 0;
+  }
+  .project-container {
+    padding: 1rem;
+  }
+  .card2 {
+    min-width: 80%; /* Adjust the width as needed */
+    width: 100%;
+  }
+}
+@media screen and (max-width: 799px) and (min-width: 768px) {
+  .card2 {
+    min-width: 50%; /* Adjust the width as needed */
+  }
 }/*# sourceMappingURL=home.css.map */
