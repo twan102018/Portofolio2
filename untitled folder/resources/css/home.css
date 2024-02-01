@@ -3,6 +3,8 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: rgb(7, 14, 39);
+  overscroll-behavior-x: none;
+  overflow-x: hidden;
   color: #ffffff;
 }
 
@@ -259,13 +261,12 @@ body {
 .card2 {
   float: left;
   padding: 1rem;
-  min-width: 500px;
+  width: 100%;
+  min-width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .card2 {
-    float: none;
-    min-width: auto;
-    width: 100%;
+    min-width: 500px;
   }
 }
 .card2 .menu-content {
