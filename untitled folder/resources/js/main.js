@@ -43,3 +43,15 @@ fetch("https://api.web3forms.com/submit", {
       result.style.display = "none";
     }, 5000);
   });
+
+
+  function showPasswordPrompt() {
+    var password = prompt("Enter the password:");
+    
+    // simpel wachtwoord
+    if (password === '088901@glr.nl') {
+      window.location.href = 'resources/images/logo.jpg';
+    } else {
+      alert("Incorrect password. Please try again.");
+    }
+  }
