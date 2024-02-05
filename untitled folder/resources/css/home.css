@@ -448,7 +448,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Add this line to center the cards vertically */
-    margin-top: 20rem;
+    margin-top: 10rem;
     margin-left: 4rem;
   }
   .card {
