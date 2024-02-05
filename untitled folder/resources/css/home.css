@@ -391,18 +391,64 @@ body {
 }
 
 /* Mobile styles */
+#form {
+  margin-top: 40vh;
+  background-color: rgb(8, 19, 61);
+  box-shadow: 0 5px 30px 10px rgba(8, 19, 61, 0.3);
+  border-radius: 10px;
+  color: white;
+}
+#form input,
+#form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+#form input:focus,
+#form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#form label {
+  display: block;
+  margin-bottom: 8px;
+}
+#form button {
+  background-color: rgba(33, 99, 242, 0.4745098039);
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#form button:hover {
+  background-color: #2163f2;
+  text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px #553300, 0px 0px 10px #553300;
+}
+#form #result {
+  margin-top: 15px;
+}
+
 @media screen and (max-width: 799px) {
+  #form {
+    margin-top: 80vh;
+  }
   .nav-container {
     font-size: 0.7rem;
   }
   .container {
-    margin-top: 10rem;
+    margin-top: 40vh;
   }
   .card-container {
     flex-direction: column;
     align-items: center;
     justify-content: center; /* Add this line to center the cards vertically */
-    margin-top: 5rem;
+    margin-top: 20rem;
     margin-left: 4rem;
   }
   .card {
