@@ -391,8 +391,12 @@ body {
 }
 
 /* Mobile styles */
+.form {
+  padding: 2rem;
+}
+
 #form {
-  margin-top: 40vh;
+  margin-top: 30vh;
   background-color: rgb(8, 19, 61);
   box-shadow: 0 5px 30px 10px rgba(8, 19, 61, 0.3);
   border-radius: 10px;
