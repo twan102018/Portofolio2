@@ -50,7 +50,7 @@ fetch("https://api.web3forms.com/submit", {
     
     // simpel wachtwoord
     if (password === '088901@glr.nl') {
-      window.location.href = 'resources/images/logo.jpg';
+      window.location.href = 'resources/images/cv.png';
     } else {
       alert("Incorrect password. Please try again.");
     }
