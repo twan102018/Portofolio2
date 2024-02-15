@@ -496,7 +496,7 @@ body {
   padding: 2rem;
 }
 #form {
-  margin-top: 370vh;
+  margin-top: 310vh;
   background-color: $card-color;
   box-shadow: 0 5px 30px 10px rgba($card-color, 0.3);
   border-radius: 10px;
@@ -611,19 +611,35 @@ body {
   
 }
 
-@media only screen and (max-width: 800px) {
-  #form{
-    margin-top: 380vh;
-  }
-}
 
 @media only screen and (max-height: 700px) {
   #form{
-    margin-top: 510vh;
+    margin-top: 450vh;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  #form{
+    margin-top: 360vh;
+  }
+}
+
 @media only screen and (max-height: 900px) {
   #form{
-    margin-top: 405vh;
+    margin-top: 335vh;
   }
+}
+.animation{
+  height: 100vh;
+}
+.Naam{
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  z-index: 2;
+
+  max-width: 200px;
+
+    background-color: #2163f2;
+    text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px #553300, 0px 0px 10px #553300;
 }
