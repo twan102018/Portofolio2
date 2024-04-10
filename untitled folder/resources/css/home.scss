@@ -390,6 +390,9 @@ body {
     }
     &.wrapper6 {
       background: url(https://eventreise.de/wp-content/uploads/berliner-zoo-panda-mit-nachwuchs.webp) 30% 1% / cover no-repeat;
+    }    
+    &.wrapper7 {
+      background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bceadaef-c9f1-43cd-9571-dcc18996830e/det4rko-6b27b94a-138b-4e4f-ac28-e25edfdce8ca.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JjZWFkYWVmLWM5ZjEtNDNjZC05NTcxLWRjYzE4OTk2ODMwZVwvZGV0NHJrby02YjI3Yjk0YS0xMzhiLTRlNGYtYWMyOC1lMjVlZGZkY2U4Y2EuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Z79vwdSF3pylnOtIhx_BkRSImC9-7kC-XHFcakh2yBk) 30% 1% / cover no-repeat;
     }
 
     .data {
@@ -492,15 +495,8 @@ body {
 
 
 // Form styling
-.form{
-  padding: 2rem;
-}
+
 #form {
-  margin-top: 310vh;
-  background-color: $card-color;
-  box-shadow: 0 5px 30px 10px rgba($card-color, 0.3);
-  border-radius: 10px;
-  color: white;
 
   input,
   textarea {
@@ -609,24 +605,5 @@ body {
     }
   }
   
-}
-
-
-@media only screen and (max-height: 700px) {
-  #form{
-    margin-top: 450vh;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  #form{
-    margin-top: 360vh;
-  }
-}
-
-@media only screen and (max-height: 900px) {
-  #form{
-    margin-top: 335vh;
-  }
 }
 
