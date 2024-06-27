@@ -329,6 +329,12 @@ body {
 .card2 .wrapper.wrapper8 {
   background: url(../images/image.png) 30% 1%/cover no-repeat;
 }
+.card2 .wrapper.wrapper9 {
+  background: url(../images/net.png) 30% 1%/cover no-repeat;
+}
+.card2 .wrapper.wrapper10 {
+  background: url(../images/ga.png) 30% 1%/cover no-repeat;
+}
 .card2 .wrapper .data {
   position: absolute;
   bottom: 0;
